@@ -36,6 +36,7 @@ export const Kinoafisha = () => {
                     <img src = { movie.poster } />
                     <span className = 'rating'>{movie.rating}</span>
                 </div>
+                <span className = 'title'>{movie.title}</span>
             </div>
         );
     });
