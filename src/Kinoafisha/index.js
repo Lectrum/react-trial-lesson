@@ -26,7 +26,15 @@ export const Kinoafisha = () => {
         getMoviesByFilter();
     }, []);
 
-    console.log(movies);
+    const moviesJSX = movies.map((movie) => {
+        return (
+            <div
+                className = 'movie'
+                key = { movie.id }>
+                movie
+            </div>
+        );
+    });
 
     return (
         <>
