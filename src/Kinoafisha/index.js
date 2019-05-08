@@ -31,7 +31,11 @@ export const Kinoafisha = () => {
             <div
                 className = 'movie'
                 key = { movie.id }>
-                movie
+                <div className = 'poster'>
+                    <span className = 'genre'>{movie.genre}</span>
+                    <img src = { movie.poster } />
+                    <span className = 'rating'>{movie.rating}</span>
+                </div>
             </div>
         );
     });
