@@ -24,7 +24,7 @@ export const Kinoafisha = () => {
         };
 
         getMoviesByFilter();
-    }, []);
+    }, [ selectedFilter ]);
 
     const moviesJSX = movies.map((movie) => {
         return (
