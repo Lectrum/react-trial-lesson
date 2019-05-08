@@ -1,5 +1,6 @@
 // Core
 import React, { useState, useEffect } from 'react';
+import cx from 'classnames';
 
 // Instruments
 import './styles/main.css';
@@ -11,6 +12,7 @@ import { api } from '../Api';
 export const Kinoafisha = () => {
     const [ selectedFilter, setSelectedFilter ] = useState('upcoming');
     const [ movies, setMovies ] = useState([]);
+    const [ selectedMovie, setSelectedMovie ] = useState('');
 
     const styles = getStyles({
         selectedFilter,
@@ -27,6 +29,10 @@ export const Kinoafisha = () => {
     }, [ selectedFilter ]);
 
     const moviesJSX = movies.map((movie) => {
+        const posterStyle = cx('poster', {
+            selectedPoster: movie.id === selectedMovie,
+        });
+
         return (
             <div
                 className = 'movie'
