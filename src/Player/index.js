@@ -89,6 +89,7 @@ export const Player = () => {
             <div className = 'controls'>
                 <div
                     className = 'progress'
+                    onClick = { scrub }
                     onMouseDown = { () => setIsProgressCapturing(true) }
                     onMouseMove = { (event) => isProgressCapturing && scrub(event) }
                     onMouseUp = { () => setIsProgressCapturing(false) }>
