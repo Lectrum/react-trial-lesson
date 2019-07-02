@@ -9,6 +9,7 @@ import video from './video.mp4';
 export const Player = () => {
     const [ isPlaying, setIsPlaying ] = useState(false);
     const [ progress, setProgress ] = useState(0);
+    const [ isProgressCapturing, setIsProgressCapturing ] = useState(false);
 
     /**
      * Создаём реф для элемента video.
@@ -38,6 +39,23 @@ export const Player = () => {
             = videoRef.current.currentTime / videoRef.current.duration * 100;
 
         setProgress(percent);
+    };
+
+    /* Устанавливаем прогресс видео указателем мыши. */
+    const scrub = (event) => {
+        /**
+         * offsetX — свойство события мыши. Возвращает расстояние от «начала» элемента до позиции указателя мыши по координате X.
+         * nativeEvent — ссылка на нативное, НЕ кросс-браузерное событие.
+         *
+         * offsetWidth — возвращает ширину элемента.
+         * О разнице между event.target и event.currentTarget: https://github.com/facebook/react/issues/5733#issuecomment-167188516.
+         */
+
+        const scrubTime
+            = event.nativeEvent.offsetX / event.currentTarget.offsetWidth
+            * videoRef.current.duration;
+
+        videoRef.current.currentTime = scrubTime;
     };
 
     /* Добавляем слушатель вкл/выкл видео по нажатию на пробел. */
