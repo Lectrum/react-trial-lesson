@@ -37,7 +37,11 @@ export const Player = () => {
                 <div className = 'progress'>
                     <div className = 'filled' />
                 </div>
-                <button title = 'Toggle Play'>{playControl}</button>
+                <button
+                    onClick = { togglePlay }
+                    title = 'Toggle Play'>
+                    {playControl}
+                </button>
                 <input
                     className = 'slider'
                     max = '1'
