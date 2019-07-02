@@ -1,5 +1,5 @@
 // Core
-import React from 'react';
+import React, { useState, useRef } from 'react';
 
 // Instruments
 import './styles.css';
@@ -7,9 +7,14 @@ import './styles.css';
 import video from './video.mp4';
 
 export const Player = () => {
-    return <h1>Поехали!!</h1>;
+    const [ isPlaying, setIsPlaying ] = useState(false);
 
-    const isPlaying = false;
+    /**
+     * Создаём реф для элемента video.
+     * Реф в React — это прямой доступ к html-элементу.
+     * С его помощью мы сможем управлять видеоплеером в явном виде.
+     */
+    const videoRef = useRef(null);
 
     const playControl = isPlaying ? <>&#10074;&#10074;</> : <>&#9654;</>;
 
