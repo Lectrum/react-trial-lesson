@@ -58,13 +58,13 @@ export const Player = () => {
                     type = 'range'
                 />
                 <button
-                    onClick = { skip }
-                    data-skip = '-10'>
+                    data-skip = '-10'
+                    onClick = { skip }>
                     « 10s
                 </button>
                 <button
-                    onClick = { skip }
-                    data-skip = '25'>
+                    data-skip = '25'
+                    onClick = { skip }>
                     25s »
                 </button>
                 <button>&#10021;</button>
