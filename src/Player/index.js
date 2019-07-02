@@ -29,6 +29,7 @@ export const Player = () => {
             <video
                 ref = { videoRef }
                 src = { video }
+                onClick = { togglePlay }
             />
             <div className = 'controls'>
                 <div className = 'progress'>
