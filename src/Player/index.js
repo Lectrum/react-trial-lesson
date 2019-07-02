@@ -7,7 +7,7 @@ import './styles.css';
 import video from './video.mp4';
 
 export const Player = () => {
-    return <h1>Поехали!</h1>;
+    return <h1>Поехали!!</h1>;
 
     const isPlaying = false;
 
