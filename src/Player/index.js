@@ -24,7 +24,7 @@ export const Player = () => {
         setIsPlaying(method === 'play');
     };
 
-    const playControl = isPlaying ? <>&#10074;&#10074;</> : <>&#9654;</>;
+    const playControl = isPlaying ? <>&#10074;&#10074;&#10074;</> : <>&#9654;</>;
 
     return (
         <div className = 'player'>
