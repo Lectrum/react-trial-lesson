@@ -33,7 +33,7 @@ export const Player = () => {
     };
 
     /* Устанавливаем прогресс проигранного видео в процентах. */
-    const handlePrgoress = () => {
+    const handleProgress = () => {
         const percent
             = videoRef.current.currentTime / videoRef.current.duration * 100;
 
