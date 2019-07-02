@@ -31,10 +31,20 @@ export const Player = () => {
         videoRef.current.currentTime += Number.parseFloat(seconds);
     };
 
-     /* Добавляем слушатель вкл/выкл видео по нажатию на пробел. */
+    /* Добавляем слушатель вкл/выкл видео по нажатию на пробел. */
     useEffect(() => {
-        console.log('Первый рендер!')
+        const handler = (event) => {
+            if (event.code === 'Space') {
+                togglePlay();
+            }
+        };
 
+        /* Подписка, выполняется при первом рендере один раз. */
+        document.addEventListener('keydown', handler);
+
+        /* Отписка, выполняется при удалении компонента один раз. */
+        return () => document.removeEventListener('keydown', handler);
+        /* Эффект выполняется один раз, потому что вторым аргументом мы передали []. */
     }, []);
 
     const playControl = isPlaying ? <>&#10074;&#10074;</> : <>&#9654;</>;
