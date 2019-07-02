@@ -31,7 +31,9 @@ export const Player = () => {
         videoRef.current.currentTime += Number.parseFloat(seconds);
     };
 
+     /* Добавляем слушатель вкл/выкл видео по нажатию на пробел. */
     useEffect(() => {
+        console.log('Первый рендер!')
 
     }, []);
 
