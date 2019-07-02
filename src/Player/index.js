@@ -87,7 +87,9 @@ export const Player = () => {
                 onTimeUpdate = { handleProgress }
             />
             <div className = 'controls'>
-                <div className = 'progress'>
+                <div
+                    className = 'progress'
+                    onMouseDown = { () => setIsProgressCapturing(true) }>
                     <div
                         className = 'filled'
                         style = {{
