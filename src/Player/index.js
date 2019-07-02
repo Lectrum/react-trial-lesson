@@ -24,6 +24,13 @@ export const Player = () => {
         setIsPlaying(method === 'play');
     };
 
+    /* Прокручиваем прогресс проигрывания. */
+    const skip = (event) => {
+        const seconds = event.target.dataset.skip;
+
+        videoRef.current.currentTime += Number.parseFloat(seconds);
+    };
+
     const playControl = isPlaying ? <>&#10074;&#10074;</> : <>&#9654;</>;
 
     return (
