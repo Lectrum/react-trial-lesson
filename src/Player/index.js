@@ -1,5 +1,5 @@
 // Core
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 // Instruments
 import './styles.css';
@@ -30,6 +30,10 @@ export const Player = () => {
 
         videoRef.current.currentTime += Number.parseFloat(seconds);
     };
+
+    useEffect(() => {
+
+    }, []);
 
     const playControl = isPlaying ? <>&#10074;&#10074;</> : <>&#9654;</>;
 
