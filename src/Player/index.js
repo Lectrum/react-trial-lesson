@@ -8,6 +8,7 @@ import video from './video.mp4';
 
 export const Player = () => {
     const [ isPlaying, setIsPlaying ] = useState(false);
+    const [ progress, setProgress ] = useState(0);
 
     /**
      * Создаём реф для элемента video.
@@ -29,6 +30,14 @@ export const Player = () => {
         const seconds = event.target.dataset.skip;
 
         videoRef.current.currentTime += Number.parseFloat(seconds);
+    };
+
+    /* Устанавливаем прогресс проигранного видео в процентах. */
+    const handlePrgoress = () => {
+        const percent
+            = videoRef.current.currentTime / videoRef.current.duration * 100;
+
+        setProgress(percent);
     };
 
     /* Добавляем слушатель вкл/выкл видео по нажатию на пробел. */
