@@ -21,6 +21,7 @@ export const Player = () => {
         const method = videoRef.current.paused ? 'play' : 'pause';
 
         videoRef.current[ method ]();
+        setIsPlaying(method === 'play');
     };
 
     const playControl = isPlaying ? <>&#10074;&#10074;</> : <>&#9654;</>;
