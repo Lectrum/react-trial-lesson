@@ -38,8 +38,8 @@ export const Player = () => {
                     <div className = 'filled' />
                 </div>
                 <button
-                    onClick = { togglePlay }
-                    title = 'Toggle Play'>
+                    title = 'Toggle Play'
+                    onClick = { togglePlay }>
                     {playControl}
                 </button>
                 <input
