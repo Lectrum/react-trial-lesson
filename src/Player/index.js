@@ -57,8 +57,16 @@ export const Player = () => {
                     step = '0.05'
                     type = 'range'
                 />
-                <button data-skip = '-10'>« 10s</button>
-                <button data-skip = '25'>25s »</button>
+                <button
+                    onClick = { skip }
+                    data-skip = '-10'>
+                    « 10s
+                </button>
+                <button
+                    onClick = { skip }
+                    data-skip = '25'>
+                    25s »
+                </button>
                 <button>&#10021;</button>
             </div>
         </div>
