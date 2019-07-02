@@ -68,7 +68,12 @@ export const Player = () => {
             />
             <div className = 'controls'>
                 <div className = 'progress'>
-                    <div className = 'filled' />
+                    <div
+                        className = 'filled'
+                        style = {{
+                            '--filedProgressBar': `${progress}%`,
+                        }}
+                    />
                 </div>
                 <button
                     title = 'Toggle Play'
