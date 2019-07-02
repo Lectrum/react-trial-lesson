@@ -20,7 +20,10 @@ export const Player = () => {
 
     return (
         <div className = 'player'>
-            <video src = { video } />
+            <video
+                ref = { videoRef }
+                src = { video }
+            />
             <div className = 'controls'>
                 <div className = 'progress'>
                     <div className = 'filled' />
