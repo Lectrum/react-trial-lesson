@@ -113,6 +113,14 @@ export const Player = () => {
                     step = '0.05'
                     type = 'range'
                 />
+                <input
+                    className = 'slider'
+                    max = '2'
+                    min = '0.5'
+                    name = 'playbackRate'
+                    step = '0.1'
+                    type = 'range'
+                />
                 <button
                     data-skip = '-10'
                     onClick = { skip }>
