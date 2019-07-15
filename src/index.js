@@ -3,6 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // App
-import { Player } from './Player';
+import { Search } from './Search';
 
-ReactDOM.render(<Player />, document.getElementById('root'));
+ReactDOM.render(<Search />, document.getElementById('root'));
