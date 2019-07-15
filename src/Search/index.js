@@ -9,7 +9,7 @@ export const Search = () => {
         <section className = 'strange-search'>
             <span className = 'strange'>Странный</span>
             <input
-                placeholder = 'Добро пожаловать!'
+                placeholder = 'Поехали!'
                 style = {{
                     '--inputBorderStyle': 'solid',
                 }}
