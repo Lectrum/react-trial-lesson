@@ -4,7 +4,7 @@ import './styles/init.css';
 export const Instagram = () => {
     return (
         <section className = 'welcome'>
-            <h1>Поехали!</h1>
+            <h1>Добро пожаловать!</h1>
         </section>
     );
 };
