@@ -3,6 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // App
-import { Search } from './Search';
+import { Instagram } from './Instagram';
 
-ReactDOM.render(<Search />, document.getElementById('root'));
+ReactDOM.render(<Instagram />, document.getElementById('root'));

@@ -1,0 +1,18 @@
+.welcome {
+    --paletteColor1: #161619;
+    --paletteColor2: #eff7fc;
+
+    display: grid;
+    min-height: 100vh;
+    background-color: var(--paletteColor2);
+
+    & h1 {
+        align-self: center;
+        justify-self: center;
+        margin: 0;
+        color: var(--paletteColor1);
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+    }
+}

@@ -1,0 +1,6 @@
+.content {
+    background-color: var(--paletteColor5);
+    border-top: 1px solid var(--paletteColor3);
+    min-height: 100vh;
+    border-bottom: 1px solid var(--paletteColor3);
+}

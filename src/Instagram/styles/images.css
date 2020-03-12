@@ -1,0 +1,23 @@
+.images {
+    display: grid;
+    grid-template-columns: minmax(50px, 300px) minmax(50px, 300px) minmax(
+        50px,
+        300px
+    );
+    grid-gap: 10px;
+    margin: 10px auto 0;
+    max-width: 935px;
+    margin-bottom: 38px;
+
+    & img {
+        width: 100%;
+        cursor: pointer;
+    }
+
+    @media (--phonePortrait),
+        (--phoneLandscape),
+        (--tabletPortrait),
+        (--tabletLandscape) {
+        grid-gap: 5px;
+    }
+}
